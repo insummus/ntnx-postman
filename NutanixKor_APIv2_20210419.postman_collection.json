@@ -1,0 +1,870 @@
+{
+	"info": {
+		"_postman_id": "5442418d-5091-452b-9c9c-2ac233026a1f",
+		"name": "v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PrismElement_Test",
+			"item": [
+				{
+					"name": "Get VM List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9440/PrismGateway/services/rest/v2.0/vms",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9440",
+							"path": [
+								"PrismGateway",
+								"services",
+								"rest",
+								"v2.0",
+								"vms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUUID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9440/PrismGateway/services/rest/v2.0/vms/?filter=vm_name==CentTEST1-ST1-cpu",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9440",
+							"path": [
+								"PrismGateway",
+								"services",
+								"rest",
+								"v2.0",
+								"vms",
+								""
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "vm_name==CentTEST1-ST1-cpu"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clone VM",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"spec_list\":[{\"name\":\"CentTEST1-ST1-name\"}]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9440/PrismGateway/services/rest/v2.0/vms/2aef0a70-6151-41fe-bb1f-2ca9383c9598/clone",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9440",
+							"path": [
+								"PrismGateway",
+								"services",
+								"rest",
+								"v2.0",
+								"vms",
+								"2aef0a70-6151-41fe-bb1f-2ca9383c9598",
+								"clone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StopVm",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"transition\": \"OFF\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9440/PrismGateway/services/rest/v2.0/vms/bc7e9afc-535e-4117-9eea-618db73e7947/set_power_state",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9440",
+							"path": [
+								"PrismGateway",
+								"services",
+								"rest",
+								"v2.0",
+								"vms",
+								"bc7e9afc-535e-4117-9eea-618db73e7947",
+								"set_power_state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StartVm",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"host_uuid\": \"df04412d-ef68-4de0-bc97-783b38ecbacb\",\n  \"transition\": \"on\",\n  \"uuid\": \"024343e1-f63a-45ae-b34b-20b427b72616\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9440/PrismGateway/services/rest/v2.0/vms/024343e1-f63a-45ae-b34b-20b427b726/set_power_state/",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9440",
+							"path": [
+								"PrismGateway",
+								"services",
+								"rest",
+								"v2.0",
+								"vms",
+								"024343e1-f63a-45ae-b34b-20b427b726",
+								"set_power_state",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveNetworkAdapter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"spec_list\":[{\"name\":\"CentTEST1-1\",\"memory_mb\":4096,\"num_vcpus\":2,\"num_cores_per_vcpu\":1,\"vm_nics\":[{\"network_uuid\":\"bfa0484f-1b8b-4a6c-99c9-11ebd86841ce\"}],\"override_network_config\":true,\"clone_affinity\":false,\"boot_config\":{\"uefi_boot\":false,\"boot_device_order\":[\"CDROM\",\"DISK\",\"NIC\"]}}]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9440/PrismGateway/services/rest/v2.0/vms/a26f991a-a48d-4aec-9943-127232587c51/nics/17ac3291-35a0-4383-9311-578c834704a5",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9440",
+							"path": [
+								"PrismGateway",
+								"services",
+								"rest",
+								"v2.0",
+								"vms",
+								"a26f991a-a48d-4aec-9943-127232587c51",
+								"nics",
+								"17ac3291-35a0-4383-9311-578c834704a5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetNetworkAdapterInfo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9440/PrismGateway/services/rest/v2.0/vms/2aef0a70-6151-41fe-bb1f-2ca9383c9598/nics/\n",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9440",
+							"path": [
+								"PrismGateway",
+								"services",
+								"rest",
+								"v2.0",
+								"vms",
+								"2aef0a70-6151-41fe-bb1f-2ca9383c9598",
+								"nics",
+								"\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetVmIPAddress",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9440/PrismGateway/services/rest/v2.0/vms/024343e1-f63a-45ae-b34b-20b427b72616\n",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9440",
+							"path": [
+								"PrismGateway",
+								"services",
+								"rest",
+								"v2.0",
+								"vms",
+								"024343e1-f63a-45ae-b34b-20b427b72616\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tasks - VM",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9440/PrismGateway/services/rest/v2.0/tasks",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9440",
+							"path": [
+								"PrismGateway",
+								"services",
+								"rest",
+								"v2.0",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tasks",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9440/PrismGateway/services/rest/v2.0/tasks/f0176929-7a1c-4165-938d-25e3ff5356be",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9440",
+							"path": [
+								"PrismGateway",
+								"services",
+								"rest",
+								"v2.0",
+								"tasks",
+								"f0176929-7a1c-4165-938d-25e3ff5356be"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VmUpdate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"CentTEST1-ST1-cpu\",\"memory_mb\":4096,\"num_vcpus\":1,\"description\":\"Move VM\",\"num_cores_per_vcpu\":5,\"timezone\":\"UTC\",\"boot\":{\"uefi_boot\":false,\"boot_device_order\":[\"CDROM\",\"DISK\",\"NIC\"]},\"vm_features\":{\"FLASH_MODE\":false,\"AGENT_VM\":false}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9440/PrismGateway/services/rest/v2.0/vms/d4d5ad1e-dd2c-4e70-983e-6ac8adedfdd4",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9440",
+							"path": [
+								"PrismGateway",
+								"services",
+								"rest",
+								"v2.0",
+								"vms",
+								"d4d5ad1e-dd2c-4e70-983e-6ac8adedfdd4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}

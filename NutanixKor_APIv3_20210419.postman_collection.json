@@ -1,0 +1,1116 @@
+{
+	"info": {
+		"_postman_id": "ea67c3ba-8083-4a3f-ad0f-08e3a98a17f0",
+		"name": "v3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PrismCentral_Test",
+			"item": [
+				{
+					"name": "Get VM List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Nutanix/4u!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "apis",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"kind\": \"vm\",\n  \"offset\": 0,\n  \"length\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9000/api/nutanix/v3/vms/list",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"nutanix",
+								"v3",
+								"vms",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUUID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"filter\": \"vm_name==CentTEST1-ST1-name3\"\n}"
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9000/api/nutanix/v3/vms/list",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"nutanix",
+								"v3",
+								"vms",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetVM Info",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9000/v3/vms/5589ed12-abeb-40b1-bfb0-727a72dce233",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9000",
+							"path": [
+								"v3",
+								"vms",
+								"5589ed12-abeb-40b1-bfb0-727a72dce233"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clone VM",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"metadata\": {\n    \"entity_version\": \"test1111\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9000/api/nutanix/v3/vms/5589ed12-abeb-40b1-bfb0-727a72dce233/clone",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"nutanix",
+								"v3",
+								"vms",
+								"5589ed12-abeb-40b1-bfb0-727a72dce233",
+								"clone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StopVm",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"metadata\": {\n        \"kind\": \"vm\",\n        \"project_reference\": {\n            \"kind\": \"project\",\n            \"uuid\": \"cbc27fb5-9bd1-47b7-8196-00fdaedc053e\"\n      },\n      \"spec_version\": 17\n    },\n    \"spec\": {\n      \"name\": \"CentTEST1-ST1-name3\",\n      \"resources\": {\n        \"power_state\": \"OFF\",\n        \"hardware_clock_timezone\": \"UTC\"\n      }\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9000/api/nutanix/v3/vms/5589ed12-abeb-40b1-bfb0-727a72dce233",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"nutanix",
+								"v3",
+								"vms",
+								"5589ed12-abeb-40b1-bfb0-727a72dce233"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StartVm",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"api_version\": \"3.1\",\n    \"metadata\": {\n        \"kind\": \"vm\",\n        \"project_reference\": {\n            \"kind\": \"project\",\n            \"uuid\": \"cbc27fb5-9bd1-47b7-8196-00fdaedc053e\"\n      },\n      \"spec_version\": 22\n    },\n    \"spec\": {\n      \"name\": \"CentTEST1-ST1-name3\",\n      \"resources\": {\n        \"power_state\": \"ON\",\n        \"hardware_clock_timezone\": \"UTC\"\n      }\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9000/api/nutanix/v3/vms/5589ed12-abeb-40b1-bfb0-727a72dce233",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"nutanix",
+								"v3",
+								"vms",
+								"5589ed12-abeb-40b1-bfb0-727a72dce233"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddNIC",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"api_version\": \"3.1\",\n    \"metadata\": {\n        \"kind\": \"vm\",\n        \"project_reference\": {\n            \"kind\": \"project\",\n            \"uuid\": \"cbc27fb5-9bd1-47b7-8196-00fdaedc053e\"\n      },\n      \"spec_version\": 42\n    },\n    \"spec\": {\n      \"name\": \"CentTEST1-ST1-name3\",\n      \"resources\": {\n            \"power_state\": \"ON\",\n            \"hardware_clock_timezone\": \"UTC\",\n            \"nic_list\": [\n                {\n                    \"nic_type\": \"NORMAL_NIC\",\n                    \"uuid\": \"d68fbff6-5750-407a-bae4-abb5141c62f1\",\n                    \"ip_endpoint_list\": [],\n                    \"vlan_mode\": \"ACCESS\",\n                    \"mac_address\": \"50:6b:8d:be:a3:e0\",\n                    \"subnet_reference\": {\n                        \"kind\": \"subnet\",\n                        \"name\": \"DHCP_NIC\",\n                        \"uuid\": \"ebf4343f-abaf-4867-8430-8576d4857acc\"\n                    },\n                    \"is_connected\": true,\n                    \"trunked_vlan_list\": []\n                },\n                {\n                     \"subnet_reference\": {\n                        \"kind\": \"subnet\",                        \n                        \"uuid\": \"ebf4343f-abaf-4867-8430-8576d4857acc\"\n                    },\n                    \"is_connected\": true\n                }\n            ]\n        }\n    }      \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9000/api/nutanix/v3/vms/5589ed12-abeb-40b1-bfb0-727a72dce233",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"nutanix",
+								"v3",
+								"vms",
+								"5589ed12-abeb-40b1-bfb0-727a72dce233"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteVM",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"api_version\": \"3.1\",\n    \"metadata\": {\n        \"kind\": \"vm\"\n    },\n    \"spec\": {\n      \"name\": \"CentTEST1-ST1-name2\",\n      \"resources\": {\n      }\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9000/api/nutanix/v3/vms/d68fbff6-5750-407a-bae4-abb5141c62f1",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"nutanix",
+								"v3",
+								"vms",
+								"d68fbff6-5750-407a-bae4-abb5141c62f1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveNetworkAdapter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"spec_list\":[{\"name\":\"CentTEST1-1\",\"memory_mb\":4096,\"num_vcpus\":2,\"num_cores_per_vcpu\":1,\"vm_nics\":[{\"network_uuid\":\"bfa0484f-1b8b-4a6c-99c9-11ebd86841ce\"}],\"override_network_config\":true,\"clone_affinity\":false,\"boot_config\":{\"uefi_boot\":false,\"boot_device_order\":[\"CDROM\",\"DISK\",\"NIC\"]}}]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9000/PrismGateway/services/rest/v2.0/vms/a26f991a-a48d-4aec-9943-127232587c51/nics/17ac3291-35a0-4383-9311-578c834704a5",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9000",
+							"path": [
+								"PrismGateway",
+								"services",
+								"rest",
+								"v2.0",
+								"vms",
+								"a26f991a-a48d-4aec-9943-127232587c51",
+								"nics",
+								"17ac3291-35a0-4383-9311-578c834704a5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetNetworkAdapterInfo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9000/api/nutanix/v3/vms/5589ed12-abeb-40b1-bfb0-727a72dce233",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"nutanix",
+								"v3",
+								"vms",
+								"5589ed12-abeb-40b1-bfb0-727a72dce233"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetVmIPAddress",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9000/api/nutanix/v3/vms/5589ed12-abeb-40b1-bfb0-727a72dce233",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"nutanix",
+								"v3",
+								"vms",
+								"5589ed12-abeb-40b1-bfb0-727a72dce233"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tasks",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9000/api/nutanix/v3/tasks/47a82cd0-12e2-4eda-a384-c7c374d8592f",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"nutanix",
+								"v3",
+								"tasks",
+								"47a82cd0-12e2-4eda-a384-c7c374d8592f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tasks list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kind\": \"task\",\n    \"offset\": 0,\n    \"length\": 1,\n    \"filter\": \"percentage_complete==100\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9000/api/nutanix/v3/tasks/list",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"nutanix",
+								"v3",
+								"tasks",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get VM List Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "!234Qwer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"kind\": \"vm\",\n  \"offset\": 0,\n  \"length\": 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://59.14.81.136:9000/api/nutanix/v3/vms/list",
+							"protocol": "https",
+							"host": [
+								"59",
+								"14",
+								"81",
+								"136"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"nutanix",
+								"v3",
+								"vms",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
